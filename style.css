@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Italianno&family=Noto+Sans+Indic+Siyaq+Numbers&family=Righteous&display=swap');
         /* CSS Variables for Color Palette */
         :root {
             --emerald: #6FAF85;
@@ -10,7 +13,7 @@
             
             --font-serif: 'Playfair Display', serif;
             --font-script: 'Great Vibes', cursive;
-            --font-sans: 'Lato', sans-serif;
+            --font-sans: 'Poppins', sans-serif;
             --font-arabic: 'Amiri', serif;
         }
 
@@ -29,7 +32,9 @@
             overscroll-behavior-y: none;
         }
 
-        h1, h2, h3 { font-family: var(--font-serif); }
+        h1, h2, h3 { 
+            font-family: 'Cormorant Garamond', serif;
+        } 
         
         /* 1. Pre-loader / Splash Screen */
         #preloader {
@@ -52,8 +57,11 @@
         }
 
         .bismillah-arabic {
-            font-family: var(--font-arabic);
-            font-size: 2rem;
+            font-family: "Cormorant Garamond", serif;
+            font-optical-sizing: auto;
+            
+            font-style: normal;
+            font-size: 1.5rem;
             margin-bottom: 10px;
             direction: rtl;
             border-left: 2px solid var(--gold);
@@ -93,8 +101,9 @@
         }
 
         .hero-names {
-            font-family: var(--font-script);
+            font-family: 'Italianno', cursive;
             font-size: 6rem;
+            font-weight: 400;
             color: #6FAF85;
             /* text-shadow: 2px 4px 10px rgba(0,0,0,); */
             margin-bottom: 10px;
@@ -232,9 +241,21 @@
         .events-section h2 {
             font-size: 3.5rem;
             color: var(--gold);
-            margin-bottom: 50px;
-            font-family: var(--font-script);
+            margin-bottom: -50px;
+            /* font-family: var(--font-script); */
         }
+
+
+
+
+.events-section h2::after {
+    content: "";
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #d5d5d5, transparent);
+    display: block;
+    margin: 15px auto 0;
+}
 
         .event-details {
             border-bottom: 1px solid rgba(212, 175, 55, 0.3);
@@ -461,11 +482,14 @@ body {
    PREMIUM COUNTDOWN STYLE
    =============================== */
 .bismillah-text {
-    font-family: 'Amiri', serif;
+    font-family: "Cormorant Garamond", serif;
+    font-optical-sizing: auto;
+    
+    font-style: normal;
     font-size: 1.5rem;
-    margin-bottom: 30px;
+    margin-bottom: -30px;
     color: #ffffff; /* soft gold/brown */
-    text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.3);
 
     text-align: center;
 }
@@ -623,7 +647,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at center, rgba(212,175,55,0.08), transparent 70%);
+    background: radial-gradient(circle at center, rgba(212,175,55,0.08), transparent 60%);
     animation: glowMove 10s ease-in-out infinite alternate;
 }
 
@@ -635,15 +659,16 @@ body {
 
 .bismillah {
     font-family: var(--font-arabic);
-    font-size: 2.2rem;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    margin-bottom: -30px;
     color: var(--cream);
     direction: rtl;
 }
 
 .events-sub {
-    margin-bottom: 50px;
+    margin-bottom: -40px;
     font-style: italic;
+    font-size: x-small;
     opacity: 0.8;
     letter-spacing: 1px;
 }/* Event Cards Upgrade */
@@ -676,7 +701,7 @@ body {
 }
 
 .events-section::after {
-    content: "☾";
+    content: "";
     position: absolute;
     top: 30px;
     right: 40px;
@@ -689,6 +714,15 @@ body {
    MOMENTS + VENUE SECTION
    =============================== */
 
+
+.moments-venue-section h2::after {
+    content: "";
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #37d48b, transparent);
+    display: block;
+    margin: 15px auto 0;
+}
 .moments-venue-section {
     text-align: center;
     padding: 120px 20px;
@@ -696,7 +730,8 @@ body {
 }
 .moments-venue-section h2{
     color: var(--emerald);
-    font-size: 2rem;
+    font-size: 2.5rem;
+        position: relative;
 }
 .section-sub {
     margin-top: 10px;
@@ -759,6 +794,7 @@ body {
 
 .venue-card h3 {
     color: var(--emerald);
+    font-family: var(--font-sans);
     margin-bottom: 10px;
 }
 
@@ -848,10 +884,15 @@ body {
 }
 
 .footer-title {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2.8rem;
+    
+    /* font-size: 1rem; */
     color: #fff;
     text-align: center;
+}
+.footer-title h2{
+    font-size: 10px;
+    font-family: 'Cormorant Garamond', serif;
+
 }
 
 .footer-text {
@@ -1007,6 +1048,7 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 2.6rem;
     color: var(--emerald);
+    font-weight: 400;
     margin-bottom: 10px;
     transition: 0.4s ease;
 }
@@ -1065,7 +1107,7 @@ body {
 
 .family-section h2 {
     font-size: 3rem;
-    font-family: 'Great Vibes', cursive;
+    /* font-family: 'Great Vibes', cursive; */
     color: var(--emerald);
     margin-bottom: 60px;
     position: relative;
@@ -1133,22 +1175,24 @@ body {
 }
 
 .family-card h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    margin-bottom: 14px;
     color: var(--emerald);
-    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .family-card p {
     font-size: 1rem;
-    color: rgb(28, 26, 26);
+    color: rgb(49, 46, 46);
     margin-bottom: 12px;
-    line-height: 1.8;
+    /* line-height: 1.8; */
 }
 
 .family-card strong {
     color: rgb(28, 26, 26);
-    font-size: 1.3rem;
+    font-size: 2rem;
+  font-family: 'Cormorant Garamond', serif;
+    /* font-weight: 400; */
 }
 
 /* Decorative Glow */
